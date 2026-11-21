@@ -1,0 +1,11 @@
+Part,Type,Quantity,Unit price (USD),Line total (USD),Link,Vendor,Funding,Notes
+Seeed XIAO RP2040,Part,1,5.40,5.40,https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html,Seeed Studio,Grant,U1 - microcontroller
+PCB 26x57.5 mm 2-layer FR4 1.6 mm (5 pcs min.),PCB,1,2.00,2.00,https://jlcpcb.com,JLCPCB,Grant,HackPad.kicad_pcb - HASL finish
+PCB shipping,Shipping,1,,,https://jlcpcb.com,JLCPCB,Grant,price from JLCPCB cart
+Kailh MX switches Clicky Navy Blue (10 pack),Part,1,9.95,9.95,https://www.adafruit.com/products/5150,Adafruit,Grant,need 3 - SW1-SW3
+Black DSA keycaps MX (10 pack),Part,1,5.95,5.95,https://www.adafruit.com/product/5097,Adafruit,Grant,need 3
+M3 heat-set insert (pack),Part,1,5.95,5.95,https://www.adafruit.com/products/4255,Adafruit,Grant,need 3 - for the tray
+M3 x 8 mm socket head screw stainless (25 pack),Part,1,3.79,3.79,https://www.zoro.com/zoro-select-m3-050-socket-head-cap-screw-socket-plain-18-8-stainless-steel-8-mm-length-25-pk-lhs4x03008-025p1/i/G2356602,Zoro,Grant,need 3 - plate into insert
+Case plate,3D printed,1,0.00,0.00,,Hack Club,Grant,case/print/hackpad_case_plate.stl + plate_logo.stl
+Case tray,3D printed,1,0.00,0.00,,Hack Club,Grant,case/print/hackpad_case_tray.stl + tray_stripes.stl
+Total,,,,33.04,,,,
