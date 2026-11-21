@@ -6,7 +6,7 @@
     (property "Value" "MOUDLE-SEEEDUINO-XIAO" (at -3.81 -11.43 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at -16.51 2.54 0)
+    (property "Footprint" "HackClub_HackPad_Care_Package:XIAO-Generic-Hybrid-14P-2.54-21X17.8MM" (at -16.51 2.54 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at -16.51 2.54 0)

@@ -29,7 +29,7 @@
 				(justify left top)
 			)
 		)
-		(property "Footprint" "SK6812MINI-E - 3.2x2.8x1.78mm"
+		(property "Footprint" "HackClub_HackPad_Care_Package:SK6812MINI-E_fixed"
 			(at 1.27 -7.62 0)
 			(effects
 				(font

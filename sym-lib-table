@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "HackPad_OLED")(type "KiCad")(uri "${KIPRJMOD}/HackPad_OLED.kicad_sym")(options "")(descr "OLED display for the HackPad"))
+)

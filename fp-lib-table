@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "HackPad")(type "KiCad")(uri "${KIPRJMOD}/HackPad.pretty")(options "")(descr "HackPad project footprints"))
+)

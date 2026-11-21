@@ -510,7 +510,7 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.2,
+        "track_width": 0.25,
         "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3,
@@ -665,7 +665,7 @@
         "uuid": "eceb0e39-076f-4550-9917-0671c3906ad1"
       }
     ],
-    "used_designators": "#PWR1-2,SW1-3,U1-2",
+    "used_designators": "#PWR1-11,D1-4,DS1,J1,LS1,SW1-4,U1-2",
     "variants": []
   },
   "sheets": [
