@@ -7,7 +7,7 @@ Translucent Smoke DSA keycaps MX (10 pack),Part,1,5.95,5.95,https://www.adafruit
 NeoPixel Reverse Mount RGB LEDs SK6812MINI-E (10 pack),Part,1,2.95,2.95,https://www.adafruit.com/products/4960,Adafruit,Grant,need 4 - D1-D4 (reverse mount; data on D0),
 0.91 inch OLED 128x32 I2C SSD1306 module (blue),Part,1,5.59,5.59,https://www.icstation.com/inch-128x32-serial-blue-oled-display-module-12832-arduino-p-9934.html,ICStation,Grant,DS1 - pin order GND VCC SCL SDA; 3.3-5 V; I2C 0x3C; item 9934 (white 9933 seller on Tindie on break until 2026-12-31),
 M3 heat-set insert (pack),Part,1,5.95,5.95,https://www.adafruit.com/products/4255,Adafruit,Grant,need 3 - for the tray,
-M3 x 8 mm socket head screw stainless (25 pack),Part,1,3.99,3.99,https://www.zoro.com/zoro-select-m3-050-socket-head-cap-screw-socket-plain-18-8-stainless-steel-8-mm-length-25-pk-lhs4x03008-025p1/i/G2356602,Zoro,Grant,need 3 - plate into insert,
+M3 x 8 mm socket head screw DIN 912 stainless A2 (TOOLCRAFT 888736; 10 pcs),Part,10,0.07,0.70,https://www.conrad.at/de/p/toolcraft-888736-zylinderschrauben-m3-8-mm-innensechskant-din-912-edelstahl-a2-1-st-888736.html,Conrad Electronic (AT),Grant,"need 3 - plate into insert; min. order 10 pcs; EUR 0.06/pc, cart EUR 9.50 incl. EUR 2.95 small-order fee + EUR 5.95 shipping",
 Little rubber bumper feet (4 pack),Part,1,0.95,0.95,https://www.adafruit.com/products/550,Adafruit,Grant,need 4 - 8 mm feet for the 8 mm recesses in the tray bottom,
 Case plate,3D printed,1,0.00,0.00,,Hack Club,Grant,case/print/hackpad_case_plate.stl + plate_logo.stl (73.3 x 100.8 x 17 mm case),
 Case tray,3D printed,1,0.00,0.00,,Hack Club,Grant,case/print/hackpad_case_tray.stl + tray_stripes.stl,
