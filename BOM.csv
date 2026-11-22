@@ -1,5 +1,5 @@
-Part,Type,Qty,Unit Price (USD),Line Total (USD),Link,Vendor,Funding,Notes
-Seeed XIAO RP2040,Part,1,5.40,5.40,https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html,Seeed Studio,Grant,U1 - microcontroller; soldered flat onto the FRONT (top-right corner), no pin headers needed; visible through the window in the plate
+Part,Type,Quantity,Unit price (USD),Line total (USD),Link,Vendor,Funding,Notes
+Seeed XIAO RP2040,Part,1,5.40,5.40,https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html,Seeed Studio,Grant,U1 - microcontroller; soldered flat onto the FRONT (top-right corner)
 PCB 52.5x80 mm 2-layer FR4 1.6 mm (5 pcs min.),PCB,1,2.00,2.00,https://jlcpcb.com,JLCPCB,Grant,HackPad.kicad_pcb - HASL finish; 4 LED cut-outs are routed slots in Edge.Cuts
 PCB shipping,Shipping,1,,,https://jlcpcb.com,JLCPCB,Grant,price from JLCPCB cart
 Kailh MX switches Clicky Navy Blue (10 pack),Part,1,9.95,9.95,https://www.adafruit.com/products/5150,Adafruit,Grant,need 4 - SW1-SW4
@@ -11,3 +11,4 @@ M3 x 8 mm socket head screw stainless (25 pack),Part,1,3.79,3.79,https://www.zor
 Little rubber bumper feet (4 pack),Part,1,0.95,0.95,https://www.adafruit.com/products/550,Adafruit,Grant,need 4 - 8 mm feet for the 8 mm recesses in the tray bottom
 Case plate,3D printed,1,0.00,0.00,,Hack Club,Grant,case/print/hackpad_case_plate.stl + plate_logo.stl (73.3 x 100.8 x 17 mm case)
 Case tray,3D printed,1,0.00,0.00,,Hack Club,Grant,case/print/hackpad_case_tray.stl + tray_stripes.stl
+Total,,,,42.93,,,,
