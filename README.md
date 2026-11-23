@@ -4,6 +4,8 @@
 
 My hackpad for Hack Club. 4 keys, 4 RGB LEDs and a tiny 0.91" OLED, running on a Seeed XIAO RP2040 with KMK.
 
+The whole build, day by day, is in my [journal](journal.md).
+
 Press a key and the LED next to it lights up, and the screen shows what the key just did. I like seeing the tech, so the case has windows: you can see the XIAO, the LEDs, the Hack Club flag on the PCB and the screen.
 
 ![case](images/case.png)
@@ -36,6 +38,7 @@ All parts with links and prices are in [BOM.csv](BOM.csv).
 
 ## Folders
 
+- `journal.md` my build log
 - `PCB/` KiCad project
 - `production/` gerbers, the zip is what goes to JLCPCB
 - `case/` FreeCAD file, STEP and the STL files for printing
