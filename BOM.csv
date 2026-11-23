@@ -1,7 +1,6 @@
 Part,Type,Quantity,Unit price (USD),Line total (USD),Link,Vendor,Funding,Notes
 Seeed XIAO RP2040,Part,1,3.90,3.90,https://www.seeedstudio.com/XIAO-RP2040-v1-0-p-5026.html,Seeed Studio (DE warehouse),Grant,U1 - microcontroller; soldered flat onto the FRONT (top-right corner)
-PCB 52.5x80 mm 2-layer FR4 1.6 mm (5 pcs min.),PCB,1,2.00,2.00,https://jlcpcb.com,JLCPCB,Grant,PCB/HackPad.kicad_pcb (gerbers: production/HackPad_gerbers.zip) - HASL finish; 4 LED cut-outs are routed slots in Edge.Cuts
-PCB shipping,Shipping,1,,,https://jlcpcb.com,JLCPCB,Grant,price from JLCPCB cart
+PCB 52.5x80 mm 2-layer FR4 1.6 mm HASL lead free (3 pcs),PCB,1,33.54,33.54,https://aisler.net,Aisler (DE),Grant,"PCB/HackPad.kicad_pcb - Beautiful Boards Budget, green; EUR 28.91 incl. 20% VAT and EUR 1.68 development contribution; shipping shown as free/none in cart"
 Gateron Green clicky MX switches KS-9 (10 pack),Part,1,4.29,4.29,https://keygem.com/products/gateron-green-ks-9,Keygem (DE),Grant,need 4 - SW1-SW4; 3-pin plate mount; EUR 3.70
 ABS blank keycaps Smokey R4 (10 pack),Part,1,2.90,2.90,https://keygem.com/products/abs-blank-keycaps-10pcs,Keygem (DE),Grant,need 4; translucent smoke; EUR 2.50
 Keygem shipping,Shipping,1,,,https://keygem.com,Keygem (DE),Grant,calculated at checkout
