@@ -3,7 +3,7 @@ title: "TH3 HACKP4D"
 github: "https://github.com/aeronwtf11/THEhackPad"
 description: "First time doing hardware related project,so Im just gonna follow the HackPad guide along,and make my own version of it.\n"
 created_at: "2026-11-15"
-total_time: "16h 36m"
+total_time: "16h 54m"
 ---
 
 # November 19, 2026: First PCB Design!
@@ -87,12 +87,13 @@ _
 my time has come this is the last journal entry for this hackpad.
 was nice knowing you guys :(
 
-**ANYWAYS**,I programmed the firmware so that the hackpad is a keyboard made to help yu change the volume of the music and has also a pause/play button
+**ANYWAYS**,I programmed the firmware so that the hackpad is a keyboard made to help yu change the volume of the music and has also a pause/play button and shows whats currently playing 
 
 ![](https://fabricate.hackclub-assets.com/70506b39f86cb05e6f4d66a7422114f402bfb641d688f6f836299f2b60306b90/image-png/image.png)
 well isnt this awesome,I even added comments for you guys!
+Because if you are a fan of my work,but dont like the firmware for it,you can always change that to what you want! hooray
 
 
 _okey mwha thanks for reading :3_
 
-**Total time spent: 3h**
+**Total time spent: 3h 18m**
