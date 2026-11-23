@@ -1,22 +1,19 @@
-# TH3 HACKP4D firmware
-# KMK on CircuitPython, Seeed XIAO RP2040
-#
-# needs on CIRCUITPY:  kmk/  and in lib/:  neopixel.mpy,
-# adafruit_displayio_ssd1306.mpy, adafruit_display_text/
+# TH3 HACKP4D - KMK, XIAO RP2040
 
 import board
 import busio
 import displayio
 import terminalio
 import neopixel
+import usb_cdc
 
 import adafruit_displayio_ssd1306
 from adafruit_display_text import label
 
 try:
-    from i2cdisplaybus import I2CDisplayBus  # CircuitPython 9+
+    from i2cdisplaybus import I2CDisplayBus
 except ImportError:
-    from displayio import I2CDisplay as I2CDisplayBus  # CircuitPython 8
+    from displayio import I2CDisplay as I2CDisplayBus
 
 from kmk.kmk_keyboard import KMKKeyboard
 from kmk.scanners.keypad import KeysScanner
@@ -25,10 +22,8 @@ from kmk.modules import Module
 from kmk.extensions.media_keys import MediaKeys
 
 
-# SW1, SW2, SW3, SW4 (each one goes straight to GND)
 PINS = [board.D10, board.D9, board.D8, board.D7]
 
-# what each key does, and what the screen shows when you press it
 KEYS = [
     (KC.MPLY, "PLAY/PAUSE"),
     (KC.VOLD, "VOL -"),
@@ -36,7 +31,6 @@ KEYS = [
     (KC.MUTE, "MUTE"),
 ]
 
-# LED 1-4, lights up while the matching key is held down
 COLORS = [
     (255, 0, 0),
     (255, 140, 0),
@@ -45,22 +39,23 @@ COLORS = [
 ]
 
 BRIGHTNESS = 0.3
-FLIP_SCREEN = False  # set to True if the text on the OLED is upside down
+CHARS = 21
+FLIP_SCREEN = False  # upside down? -> True
 
 
 class HackPad(Module):
     def __init__(self):
         self.pixels = None
-        self.text = None
+        self.title = None
+        self.artist = None
+        self.serial = usb_cdc.data
+        self.buf = b""
 
     def during_bootup(self, keyboard):
-        # LEDs, data on D0, 4 in a chain
         self.pixels = neopixel.NeoPixel(board.D0, 4, brightness=BRIGHTNESS, auto_write=False)
         self.pixels.fill(0)
         self.pixels.show()
 
-        # 0.91" OLED, SDA = D4, SCL = D5
-        # if it's missing or wired wrong the keys still work
         try:
             displayio.release_displays()
             i2c = busio.I2C(scl=board.D5, sda=board.D4)
@@ -68,37 +63,53 @@ class HackPad(Module):
             screen = adafruit_displayio_ssd1306.SSD1306(
                 bus, width=128, height=32, rotation=180 if FLIP_SCREEN else 0
             )
-            self.text = label.Label(
-                terminalio.FONT, text="", anchor_point=(0.5, 0.5), anchored_position=(64, 16)
+            self.title = label.Label(
+                terminalio.FONT, text="", anchor_point=(0.5, 0.0), anchored_position=(64, 1)
+            )
+            self.artist = label.Label(
+                terminalio.FONT, text="", anchor_point=(0.5, 0.0), anchored_position=(64, 17)
             )
             group = displayio.Group()
-            group.append(self.text)
+            group.append(self.title)
+            group.append(self.artist)
             screen.root_group = group
-            self.show("TH3 HACKP4D")
         except Exception as e:
             print("OLED not found:", e)
-            self.text = None
+            self.title = None
 
-    def show(self, msg):
-        if self.text is None:
+    def now_playing(self, line):
+        if self.title is None:
             return
-        # font is 6 px wide, so scale 2 only fits 10 characters
-        self.text.scale = 2 if len(msg) <= 10 else 1
-        self.text.text = msg
+        parts = line.strip("\r").split("\t")
+        self.title.text = parts[0][:CHARS]
+        self.artist.text = parts[1][:CHARS] if len(parts) > 1 else ""
+
+    def read_serial(self):
+        s = self.serial
+        if s is None or not s.in_waiting:
+            return
+        self.buf += s.read(s.in_waiting)
+        while b"\n" in self.buf:
+            line, self.buf = self.buf.split(b"\n", 1)
+            try:
+                self.now_playing(line.decode("utf-8"))
+            except Exception:
+                pass
+        if len(self.buf) > 256:
+            self.buf = b""
 
     def process_key(self, keyboard, key, is_pressed, int_coord):
         if int_coord is not None and 0 <= int_coord < len(COLORS):
             if is_pressed:
                 self.pixels[int_coord] = COLORS[int_coord]
-                self.show(KEYS[int_coord][1])
             else:
                 self.pixels[int_coord] = (0, 0, 0)
             self.pixels.show()
         return key
 
-    # KMK wants all of these, nothing to do here
     def before_matrix_scan(self, keyboard):
-        pass
+        self.read_serial()
+
 
     def after_matrix_scan(self, keyboard):
         pass
